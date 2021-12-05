@@ -15,10 +15,21 @@ def loop_it(value, count=0):
 
 
 def three_x_plus_one(number):
-    print("Number | Count")
-    print("--------------")
+    highest_count = 0
+    highest_number = 0
+
+    # print("Number | Count")
+    # print("--------------")
     for i in range(1, int(number) + 1):
-        print(str(i), " | ", str(loop_it(i)))
+        count = loop_it(i)
+
+        if count > highest_count:
+            highest_count = count
+            highest_number = i
+
+        # print(i, " | ", highest_count)
+
+    print("Highest Count is ", highest_count, " for number ", highest_number)
 
 
 def main():
