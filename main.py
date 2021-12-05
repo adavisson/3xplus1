@@ -12,8 +12,11 @@ def loop_it(value, count=0):
 
 
 def main():
-    for i in range(1, 15):
-        print("Number: " + str(i) + str(loop_it(i)))
+    val = input("Enter a number: ")
+    print("Number | Count")
+    print("--------------")
+    for i in range(1, int(val) + 1):
+        print(str(i), " | ", str(loop_it(i)))
 
 
 main()
