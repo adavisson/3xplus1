@@ -1,3 +1,6 @@
+import time
+
+
 def decision_time(number):
     return 3 * number + 1 if number % 2 else number / 2
 
@@ -11,12 +14,21 @@ def loop_it(value, count=0):
     return loop_it(next_value, count + 1)
 
 
-def main():
-    val = input("Enter a number: ")
+def three_x_plus_one(number):
     print("Number | Count")
     print("--------------")
-    for i in range(1, int(val) + 1):
+    for i in range(1, int(number) + 1):
         print(str(i), " | ", str(loop_it(i)))
+
+
+def main():
+    val = input("Enter a number: ")
+
+    start_time = time.time()
+    three_x_plus_one(val)
+    end_time = time.time()
+
+    print("Time to Complete: ", str(end_time - start_time), "seconds")
 
 
 main()
